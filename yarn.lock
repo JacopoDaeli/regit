@@ -150,6 +150,10 @@ har-validator@~5.0.3:
     ajv "^5.1.0"
     har-schema "^2.0.0"
 
+hat@^0.0.3:
+  version "0.0.3"
+  resolved "https://artifactory.secureserver.net/artifactory/api/npm/node-virt/hat/-/hat-0.0.3.tgz#bb014a9e64b3788aed8005917413d4ff3d502d8a"
+
 hawk@~6.0.2:
   version "6.0.2"
   resolved "https://artifactory.secureserver.net/artifactory/api/npm/node-virt/hawk/-/hawk-6.0.2.tgz#af4d914eb065f9b5ce4d9d11c1cb2126eecc3038"
