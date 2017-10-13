@@ -1,3 +1,4 @@
 node_modules
 .DS_Store
-examples/token
+examples/config.js
+yarn-error.log
