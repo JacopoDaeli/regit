@@ -19,18 +19,28 @@ client.connect({
 })
 ```
 
-### `db.showCollections()`
+### `db.collections(callback)`
 
-List the the database collections.
+Fetch all collections for the current db.
 ```js
-const collections = db.collections()
-console.log(collections)
-// ['foo', 'bar', 'beep', 'boop']
+db.collections((err, collections) => {
+  if (err) return console.error(err)
+  collections.forEach((collection) => console.log(collections.name))
+  // print "[ 'foo' ]"
+})
 ```
 
-### `db.collection(name)`
+### `db.collection(name, callback)`
 
-Create a collection in the database.
+Fetch a specific collection.
+```js
+db.collection('foo', (err, collection) => {
+  if (err) return console.error(err)
+  console.log(collection.name) // print "foo"
+})
+```
+
+You can can use it without a callback in the following way.
 ```js
 const collection = db.collection('foo')
 console.log(collection.name) // print "foo"
@@ -52,7 +62,7 @@ for this new item.
 Requires [nodejs](http://nodejs.org/).
 
 ```sh
-$ npm install hubdb
+$ npm install regit
 ```
 
 ## Examples
