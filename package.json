@@ -15,6 +15,7 @@
   "author": "Jacopo Daeli <jacopo.daeli@gmail.com>",
   "license": "MIT",
   "dependencies": {
+    "async": "^2.5.0",
     "hat": "^0.0.3",
     "octonode": "^0.9.0",
     "request": "^2.83.0"

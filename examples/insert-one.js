@@ -14,31 +14,29 @@ client.connect(config, (err, db) => {
   // Create foo collection
   const foo = db.collection('foo')
 
+  // Define a callback function to call
+  // when insertOne is completed
+  const insertOneCb = (err, item, id) => {
+    if (err) console.error(err)
+    else console.log(item, id)
+  }
+
   // Insert element in foo collection
   foo.insertOne({
     foo: 'bar',
     isCool: true
-  }, (err, item, id) => {
-    if (err) console.error(err)
-    else console.log(item, id)
-  })
+  }, insertOneCb)
 
   // Insert another element in foo collection
   foo.insertOne({
     foo: 'bar',
     isCool: false
-  }, (err, item, id) => {
-    if (err) console.error(err)
-    else console.log(item, id)
-  })
+  }, insertOneCb)
 
   // Create beep collection and insert an element
   const beep = db.collection('beep')
   beep.insertOne({
     beep: 'boop',
     isAwesome: true
-  }, (err, item, id) => {
-    if (err) console.error(err)
-    else console.log(item, id)
-  })
+  }, insertOneCb)
 })

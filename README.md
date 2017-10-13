@@ -1,6 +1,6 @@
 # regit
 
-A github-powered nosql database.
+A github-powered nosql database inspired by [node-mongodb-native](http://mongodb.github.io/node-mongodb-native/2.0/api/).
 
 ## API
 
@@ -19,6 +19,15 @@ client.connect({
 })
 ```
 
+### `db.showCollections()`
+
+List the the database collections.
+```js
+const collections = db.collections()
+console.log(collections)
+// ['foo', 'bar', 'beep', 'boop']
+```
+
 ### `db.collection(name)`
 
 Create a collection in the database.
@@ -27,27 +36,16 @@ const collection = db.collection('foo')
 console.log(collection.name) // print "foo"
 ```
 
-### `collection.list(callback)`
+### `collection.insertMany(items, callback)`
 
-List documents within this database.
+Inserts an array of documents into ReGit. The callback is called
+with `(err, results)`.
 
-### `collection.add(data, callback)`
+### `collection.insertOne(items, callback)`
 
-Add a new object to the collection. If successful, the callback is called
+Add a new object to the collection. The callback is called
 with `(err, item, id)` where `id` is the id internally chosen
 for this new item.
-
-### `collection.remove(id, callback)`
-
-Remove an item from the collection given its id and a callback.
-
-### `collection.get(id, callback)`
-
-Get an item from the collection given its id and a callback.
-
-### `collection.update(id, data, callback)`
-
-Update an object in the collection, given its id, new data, and a callback.
 
 ## Installation
 
