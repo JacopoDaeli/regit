@@ -36,12 +36,12 @@ client.connect(config, (err, db) => {
   })
 
 
-  // const beep = db.collection('beep')
-  // beep.insertOne({
-  //   beep: 'boop',
-  //   isAwesome: true
-  // }, (err, item, id) => {
-  //   if (err) console.error(err)
-  //   else console.log(item, id)
-  // })
+  const beep = db.collection('beep')
+  beep.insertOne({
+    beep: 'boop',
+    isAwesome: true
+  }, (err, item, id) => {
+    if (err) console.error(err)
+    else console.log(item, id)
+  })
 })
