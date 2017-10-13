@@ -2,6 +2,9 @@
   "name": "regit",
   "version": "0.0.1",
   "main": "lib/index.js",
+  "scripts": {
+    "lint": "standard lib/*.js && standard examples/*.js"
+  },
   "keywords": [
     "github",
     "db",
