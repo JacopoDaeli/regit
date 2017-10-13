@@ -8,6 +8,6 @@ client.connect(config, (err, db) => {
   if (err) return console.error(err)
 
   // Print some database info
-  console.log(`Connected to db ${config.repo}.`)
+  console.log(`Connected to db ${db.name}.`)
   console.log(`Current sha ${db.sha}.`)
 })
