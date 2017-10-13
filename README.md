@@ -15,7 +15,7 @@ client.connect({
   username: 'username',
   repo: 'dbname'
 }, (err, db) => {
-  //
+  console.log(db.name) // print "dbname"
 })
 ```
 
@@ -40,8 +40,8 @@ db.collection('foo', (err, collection) => {
 })
 ```
 
-If you do not need to fetch collection information, you can also
-use it without a callback in the following way.
+If you do not need to fetch the collection information, you can
+also use it without a callback in the following way.
 ```js
 const collection = db.collection('foo')
 console.log(collection.name) // print "foo"
@@ -52,7 +52,7 @@ console.log(collection.name) // print "foo"
 Inserts an array of documents into ReGit. The callback is called
 with `(err, results)`.
 
-### `collection.insertOne(items, callback)`
+### `collection.insertOne(item, callback)`
 
 Add a new object to the collection. The callback is called
 with `(err, item, id)` where `id` is the id internally chosen
