@@ -40,7 +40,8 @@ db.collection('foo', (err, collection) => {
 })
 ```
 
-You can can use it without a callback in the following way.
+If you do not need to fetch collection information, you can also
+use it without a callback in the following way.
 ```js
 const collection = db.collection('foo')
 console.log(collection.name) // print "foo"
