@@ -37,7 +37,7 @@ Add a new object to the collection. If successful, the callback is called
 with `(err, item, id)` where `id` is the id internally chosen
 for this new item.
 
-### `collection.emove(id, callback)`
+### `collection.remove(id, callback)`
 
 Remove an item from the collection given its id and a callback.
 
