@@ -35,7 +35,6 @@ client.connect(config, (err, db) => {
     else console.log(item, id)
   })
 
-
   const beep = db.collection('beep')
   beep.insertOne({
     beep: 'boop',
